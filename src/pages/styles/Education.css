@@ -1,0 +1,107 @@
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px 80px; /* top padding to push down from navbar */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+/* Card Container - flex wrap for responsiveness */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  padding: 25px 30px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Headings */
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #34495e;
+  border-bottom: 2px solid #3498db; /* subtle accent */
+  padding-bottom: 6px;
+}
+
+/* Card Paragraphs */
+.card p {
+  font-size: 0.9rem;
+  margin: 6px 0;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Animation: Fade in & up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Add animation delay for each card to stagger */
+.card-container .card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.card-container .card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.card-container .card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+/* Professional training card */
+.education-page > .container > .card:last-child {
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 650px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

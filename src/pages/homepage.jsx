@@ -35,7 +35,6 @@ const Homepage = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			let scroll = Math.round(window.pageYOffset, 2);
-
 			let newLogoSize = 80 - (scroll * 4) / 10;
 
 			if (newLogoSize < oldLogoSize) {
@@ -73,10 +72,7 @@ const Homepage = () => {
 			<Helmet>
 				<title>{INFO.main.title}</title>
 				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
+				<meta name="keywords" content={currentSEO.keywords.join(", ")} />
 			</Helmet>
 
 			<div className="page-content">
@@ -90,79 +86,88 @@ const Homepage = () => {
 
 					<div className="homepage-container">
 						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
-									{INFO.homepage.title}
-								</div>
+							{/* Updated Hero Section Left Side */}
+							
+					<div className="homepage-first-area-left-side">
+ <div className="title homepage-title">
+  <span className="animated-name">{INFO.homepage.name}</span>
+  <br />
+  <span style={{ fontSize: "1.2rem", fontWeight: 500 }}>
+    {INFO.homepage.titleRole}
+  </span>
+</div>
 
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
-								</div>
-							</div>
+<div
+  className="subtitle homepage-subtitle"
+  style={{ fontFamily: "Roboto, sans-serif", fontSize: "1rem", fontWeight: 400 }}
+>
+  {INFO.homepage.description}
+</div>
 
+  <button
+  onClick={() =>
+    window.open(
+      "https://drive.google.com/uc?export=download&id=1FzDNh_yjlSakDvFKZi4VxSC7RjPza-iL",
+      "_blank"
+    )
+  }
+  style={{
+    marginTop: "1.5rem",
+    padding: "0.75rem 1.75rem",
+    fontSize: "1rem",
+    backgroundColor: "#000000",
+    color: "#ffffff",
+    border: "2px solid #000000",
+    borderRadius: "6px",
+    cursor: "pointer",
+    position: "relative",
+    overflow: "hidden",
+    transition: "color 0.3s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.color = "#000000";
+    e.currentTarget.style.backgroundColor = "#ffffff";
+    e.currentTarget.style.borderColor = "#000000";
+    e.currentTarget.style.boxShadow = "0 0 8px 2px rgba(0, 0, 0, 0.5)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.color = "#ffffff";
+    e.currentTarget.style.backgroundColor = "#000000";
+    e.currentTarget.style.borderColor = "#000000";
+    e.currentTarget.style.boxShadow = "none";
+  }}
+>
+  Get CV
+</button>
+
+</div>
+
+
+							{/* Hero Section Right Side */}
 							<div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
-										<img
-											src="homepage.jpg"
-											alt="about"
-											className="homepage-image"
-										/>
+										<img src="a1.jpg" alt="about" className="homepage-image" />
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
+							<a href={INFO.socials.twitter} target="_blank" rel="noreferrer">
+								<FontAwesomeIcon icon={faTwitter} className="homepage-social-icon" />
 							</a>
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
+							<a href={INFO.socials.github} target="_blank" rel="noreferrer">
+								<FontAwesomeIcon icon={faGithub} className="homepage-social-icon" />
 							</a>
-							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
+							<a href={INFO.socials.stackoverflow} target="_blank" rel="noreferrer">
+								<FontAwesomeIcon icon={faStackOverflow} className="homepage-social-icon" />
 							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
+							<a href={INFO.socials.instagram} target="_blank" rel="noreferrer">
+								<FontAwesomeIcon icon={faInstagram} className="homepage-social-icon" />
 							</a>
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
+							<a href={`mailto:${INFO.main.email}`} target="_blank" rel="noreferrer">
+								<FontAwesomeIcon icon={faMailBulk} className="homepage-social-icon" />
 							</a>
 						</div>
 
@@ -173,10 +178,7 @@ const Homepage = () => {
 						<div className="homepage-after-title">
 							<div className="homepage-articles">
 								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
+									<div className="homepage-article" key={(index + 1).toString()}>
 										<Article
 											key={(index + 1).toString()}
 											date={article().date}

@@ -24,10 +24,7 @@ const Articles = () => {
 			<Helmet>
 				<title>{`Articles | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
+				<meta name="keywords" content={currentSEO.keywords.join(", ")} />
 			</Helmet>
 
 			<div className="page-content">
@@ -48,6 +45,20 @@ const Articles = () => {
 							{INFO.articles.description}
 						</div>
 
+						{/* 👉 Add button here if ctaText and ctaLink exist */}
+						{INFO.articles.ctaText && INFO.articles.ctaLink && (
+							<div className="articles-button-container">
+								<a
+									href={INFO.articles.ctaLink}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="articles-button"
+								>
+									{INFO.articles.ctaText}
+								</a>
+							</div>
+						)}
+
 						<div className="articles-container">
 							<div className="articles-wrapper">
 								{myArticles.map((article, index) => (
@@ -67,6 +78,7 @@ const Articles = () => {
 							</div>
 						</div>
 					</div>
+
 					<div className="page-footer">
 						<Footer />
 					</div>

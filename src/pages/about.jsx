@@ -23,10 +23,7 @@ const About = () => {
 			<Helmet>
 				<title>{`About | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
+				<meta name="keywords" content={currentSEO.keywords.join(", ")} />
 			</Helmet>
 
 			<div className="page-content">
@@ -41,16 +38,14 @@ const About = () => {
 					<div className="about-container">
 						<div className="about-main">
 							<div className="about-right-side">
-								<div className="title about-title">
-									{INFO.about.title}
-								</div>
-
+								<div className="title about-title">{INFO.about.title}</div>
 								<div className="subtitle about-subtitle">
 									{INFO.about.description}
 								</div>
 							</div>
 
 							<div className="about-left-side">
+								{/* 👤 Image */}
 								<div className="about-image-container">
 									<div className="about-image-wrapper">
 										<img
@@ -60,16 +55,52 @@ const About = () => {
 										/>
 									</div>
 								</div>
+							</div>
+						</div>
 
-								<div className="about-socials">
-									<Socials />
+						{/* ❤️ What I Like */}
+						<div className="about-interests-section">
+							<div className="interests-title">What I Like To Do!</div>
+							<div className="interests-grid">
+								<div className="interest-item">
+									<img src="/b1.jpg" alt="Troubleshooting" />
+									<span>Troubleshooting system issues</span>
+								</div>
+								<div className="interest-item">
+									<img src="/b2.jpg" alt="Network" />
+									<span>Identifying network problems</span>
+								</div>
+								<div className="interest-item">
+									<img src="/b3.jpg" alt="Linux" />
+									<span>Linux, Windows & E-commerce</span>
+								</div>
+								<div className="interest-item">
+									<img src="/b4.jpg" alt="Reading" />
+									<span>Reading tech blogs & news</span>
+								</div>
+								<div className="interest-item">
+									<img src="/b5.jpg" alt="Tools" />
+									<span>Exploring tools & open-source</span>
+								</div>
+								<div className="interest-item">
+									<img src="/b6.jpg" alt="Adventure" />
+									<span>Adventure & exploring places</span>
 								</div>
 							</div>
 						</div>
+
+						{/* 🔗 Socials (Desktop) */}
+						<div className="about-socials">
+							<Socials />
+						</div>
+
+						{/* 📱 Mobile Socials */}
 						<div className="about-socials-mobile">
 							<Socials />
 						</div>
 					</div>
+
+					{/* 📄 Footer */}
 					<div className="page-footer">
 						<Footer />
 					</div>

@@ -9,6 +9,11 @@ import Articles from "./pages/articles";
 import ReadArticle from "./pages/readArticle";
 import Contact from "./pages/contact";
 import Notfound from "./pages/404";
+import Education from './pages/Education';
+import Skills from './pages/Skills';
+
+
+
 
 import { TRACKING_ID } from "./data/tracking";
 import "./app.css";
@@ -30,6 +35,9 @@ function App() {
 				<Route path="/article/:slug" element={<ReadArticle />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="*" element={<Notfound />} />
+
+				<Route path="/education" element={<Education />} />
+				<Route path="/skills" element={<Skills />} />
 			</Routes>
 		</div>
 	);

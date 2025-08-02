@@ -1,3 +1,4 @@
+/* === Article Logo Container === */
 .articles-logo-container {
 	display: flex;
 	justify-content: left;
@@ -13,6 +14,7 @@
 	top: 4vh;
 }
 
+/* === Article Main Layout === */
 .articles-main-container {
 	display: flex;
 	flex-direction: column;
@@ -41,6 +43,32 @@
 	width: 100%;
 }
 
+/* === Read Now Button === */
+.articles-button-container {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.articles-button {
+	display: inline-block;
+	padding: 12px 28px;
+	background-color: #cde70d; /* Tailwind yellow-300 */
+	color: black;
+	font-weight: 600;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.articles-button:hover {
+	background-color: #fbbf24; /* Tailwind yellow-500 */
+	transform: translateY(-2px) scale(1.03);
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === Responsive Typography === */
 @media (max-width: 1024px) {
 	.articles-title {
 		width: 100% !important;
@@ -49,4 +77,48 @@
 	.articles-subtitle {
 		width: 100% !important;
 	}
+}
+
+/* === Article Body Content Style === */
+.article-content {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 2rem;
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: #2c2c2c;
+	background-color: #fff;
+}
+
+.article-content h1 {
+	font-size: 2.2rem;
+	margin-bottom: 1.5rem;
+	color: #1a1a1a;
+}
+
+.article-content h2 {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	color: #333;
+}
+
+.article-content ul,
+.article-content ol {
+	margin-left: 1.5rem;
+}
+
+.article-content p {
+	margin-top: 1rem;
+}
+
+.article-content em {
+	font-style: italic;
+	color: #555;
+}
+
+.randImage {
+	width: 100%;
+	margin: 2rem 0;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
