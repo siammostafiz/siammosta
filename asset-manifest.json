@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/siammosta/static/css/main.511ab773.css",
+    "main.css": "/siammosta/static/css/main.e145078b.css",
     "main.js": "/siammosta/static/js/main.cbafad70.js",
     "static/js/787.512dd3f2.chunk.js": "/siammosta/static/js/787.512dd3f2.chunk.js",
     "index.html": "/siammosta/index.html",
-    "main.511ab773.css.map": "/siammosta/static/css/main.511ab773.css.map",
+    "main.e145078b.css.map": "/siammosta/static/css/main.e145078b.css.map",
     "main.cbafad70.js.map": "/siammosta/static/js/main.cbafad70.js.map",
     "787.512dd3f2.chunk.js.map": "/siammosta/static/js/787.512dd3f2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.511ab773.css",
+    "static/css/main.e145078b.css",
     "static/js/main.cbafad70.js"
   ]
 }
