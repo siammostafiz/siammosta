@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/siammosta/static/css/main.511ab773.css",
+    "main.js": "/siammosta/static/js/main.00b67bf6.js",
+    "static/js/787.512dd3f2.chunk.js": "/siammosta/static/js/787.512dd3f2.chunk.js",
+    "index.html": "/siammosta/index.html",
+    "main.511ab773.css.map": "/siammosta/static/css/main.511ab773.css.map",
+    "main.00b67bf6.js.map": "/siammosta/static/js/main.00b67bf6.js.map",
+    "787.512dd3f2.chunk.js.map": "/siammosta/static/js/787.512dd3f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.511ab773.css",
+    "static/js/main.00b67bf6.js"
+  ]
+}
